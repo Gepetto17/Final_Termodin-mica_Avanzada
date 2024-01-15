@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{stackengine}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{sidecap}
+\usepackage{enumerate}
+\usepackage{vmargin}
+\usepackage{xcolor}
+\usepackage{physics}
+\usepackage{verbatim}
+\usepackage{bbold}
+\usepackage[english, spanish]{babel}
+\usepackage{epsfig}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{times}
+\def\be{\begin{equation}}
+\def\te{\end{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{eqnarray}}
+\def\bea{\begin{eqnarray}}
+\def\nn{\nonumber\\}
+\def\tea{\end{eqnarray}}
+\def\ea{\end{eqnarray}}
+\def\eea{\end{eqnarray}}
+\title{Monografía: calor, temperatura y trabajo en el regimen cuántico.}
+\author{Guillermo Ezequiel Perna}
+\date{\today}
+
+% https://www.overleaf.com/project/6508b8cd363ba11ebdbca765
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\url{https://arxiv.org/pdf/2306.07330.pdf}
+Este es el de time crystals
+
+\section{Frases y material interesante}
+In attempting to apply the Clausius statement of the second law to the microscopic or quantum scale, we immediately run into a problem, because it talks about cyclic processes in which there is no other change occurring at the same time, and at this scale, it is impossible to design a process in which there is no change, however slight in our devices and heat engines. \\
+Para la termodinámica en la escala microscópica, un sistema en un estado $\rho$ puede ser transformado a un sistema $\rho'$ siempre que la energía libre baje, donde la energía libre para un estado $\rho$ es
+\be
+F\left( \rho \right) = \langle E\left(\rho\right)\rangle - kTS\left( \rho \right)
+\te
+This is a version of the second law, where we also use the fact that the total energy of the system and the heat bath must be conserved. This criteria governing state transitions is valid if the system is composed of many particles and there are no long range correlations. In the case of microscopic, quantum or highly correlated systems, a criteria for state transitions o \\
+
+En el trabajo \url{https://browse.arxiv.org/pdf/1111.3834.pdf} dicen que 'la cantidad que reemplaza a la energía libre de Helmholtz en el regimen cuántico para calcular el trabajo extraíble es:'
+\be
+\label{Eq:Fmin}
+F_{min}\left( \rho \right) = -kTln\sum h\left( \omega,g,E_i \right) e^{-\beta E_i}
+\te
+donde $\omega = \sum_E P_E \rho_{\epsilon} P_E$ con $P_E = |E\rangle\langle E|$ es el estado sin coherencia en la base de autoestados de la energía. $h\left( \omega,g,E_i \right)$ es uno si el estado $|g,E_i \rangle$ está poblado y cero si no. En términos de cantidades relacionadas a teoría de la información, podemos escribir
+\be
+F_{min}\left( \rho \right) - F_{min}\left( \tau \right) = kT D_{min}\left( \rho||\tau \right)
+\te
+donde $D_{min}\left( \omega || \tau \right) := -ln\; tr \prod_\omega \tau$ es la entropía relativa mínima, con $\prod_\omega$ el proyector en el soporte de $\omega$ y $\tau$ es el estado de Gibbs $\tau = Z^{-1} \sum_{g,E} e^{-\beta E}|E,g\rangle\langle E,g|$ con $Z$ la función de partición. \\
+En el límite termodinámico $D_{min}\left( \rho || \tau \right)$ se convierte en la entropía relativa $S\left( \rho || \tau \right) := -tr\left[ \rho\; ln\left(\tau\right)\right] + tr\left[ \rho\; ln\left(\rho\right)\right]$ que es igual a $F\left( \rho \right) - F\left( \tau \right)$. Así, mientras que el máximo trabajo que puede ser extraído cuando un sistema macroscópico está en contacto con un baño térmico es $W\left( \rho \right) = F\left( \rho \right) - F\left( \tau \right)$, más generalmente es $W = F_{\epsilon}^{min}\left( \rho \right) - F_{\epsilon}^{min}\left( \tau \right)$ y solamente en el límite termodinámico se recupera el resultado tradicional. Usualmente (fuera del límite termodinámico), $F_{\epsilon}^{min}$ es más pequeño que la energía libre. El tamaño finito del sistema significa que se puede extraer menos trabajo. \\
+El hecho de que en la ecuación \ref{Eq:Fmin} entre $\rho$ sin las coherencias en la base de autoestados de la energía en vez de $\rho$ completa hace que haya más limitaciones en la cantidad de trabajo extraíble. Por ejemplo, el estado
+\be
+|\psi\rangle = \sum_E \sqrt{\frac{e^{-\beta E}}{Z}} |E\rangle
+\te
+tiene entropía y rango zero. Sin embargo, cuando se defasa en la base de autoestados de la energía para producir $\omega$, se transforma en el estado de Gibbs si los niveles de enrgía son no-degenerados y tiene energía libre $-kT\; ln\left(Z\right)$; no se le puede extraer trabajo a pesar de tener entropía cero. Sin embargo, cuando nos acercamos al límite termodinámico, las coherencias importan cada vez menos y la energía libre en el caso cuántico tiende a la energía libre para estados clásicos, y nuevamente, $F_{min}$ tiende a la energía libre de Helmholtz.
+
+\section{Definiciones de temperatura}
+
+\section{Definiciones de calor}
+
+\section{Definiciones de trabajo}
+\subsection{Definición a partir de trayectorias bohmianas}
+https://journals.aps.org/pra/pdf/10.1103/PhysRevA.97.012131
+
+
+
+
+
+
+\end{document}
+
